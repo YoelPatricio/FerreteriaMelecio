@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ferreteria?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <mapping resource="com/cpyt/entity/VentaDetalle.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/Usuario.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/Persona.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/Entrada.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/TipoPago.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/Almacen.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/EntradaDetalle.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/Venta.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/TipoComprobante.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/SerieComprobante.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/Producto.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/TipoPersona.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/UnidadMedida.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/Inventario.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/Pago.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

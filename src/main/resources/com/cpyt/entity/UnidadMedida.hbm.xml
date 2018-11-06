@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 06/11/2018 04:24:54 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.cpyt.entity.UnidadMedida" table="unidad_medida" catalog="ferreteria" optimistic-lock="version">
+        <id name="idUnidadMedida" type="java.lang.Integer">
+            <column name="id_unidad_medida" />
+            <generator class="identity" />
+        </id>
+        <property name="abreviado" type="string">
+            <column name="abreviado" length="10" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="100" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <set name="productos" table="producto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_unidad_medida" not-null="true" />
+            </key>
+            <one-to-many class="com.cpyt.entity.Producto" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 06/11/2018 04:24:54 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.cpyt.entity.Venta" table="venta" catalog="ferreteria" optimistic-lock="version">
+        <id name="idVenta" type="java.lang.Integer">
+            <column name="id_venta" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="personaByIdReferencia" class="com.cpyt.entity.Persona" fetch="select">
+            <column name="id_referencia" />
+        </many-to-one>
+        <many-to-one name="personaByIdCliente" class="com.cpyt.entity.Persona" fetch="select">
+            <column name="id_cliente" not-null="true" />
+        </many-to-one>
+        <many-to-one name="serieComprobante" class="com.cpyt.entity.SerieComprobante" fetch="select">
+            <column name="id_serie_comprobante" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tipoComprobante" class="com.cpyt.entity.TipoComprobante" fetch="select">
+            <column name="id_tipo_comprobante" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="com.cpyt.entity.Usuario" fetch="select">
+            <column name="id_usuario" not-null="true" />
+        </many-to-one>
+        <property name="fechaCompra" type="date">
+            <column name="fecha_compra" length="10" not-null="true" />
+        </property>
+        <property name="numeroComprobante" type="string">
+            <column name="numero_comprobante" length="8" not-null="true" />
+        </property>
+        <property name="montoTotal" type="big_decimal">
+            <column name="monto_total" precision="10" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <set name="ventaDetalles" table="venta_detalle" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_venta" not-null="true" />
+            </key>
+            <one-to-many class="com.cpyt.entity.VentaDetalle" />
+        </set>
+        <set name="pagos" table="pago" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_venta" not-null="true" />
+            </key>
+            <one-to-many class="com.cpyt.entity.Pago" />
+        </set>
+    </class>
+</hibernate-mapping>

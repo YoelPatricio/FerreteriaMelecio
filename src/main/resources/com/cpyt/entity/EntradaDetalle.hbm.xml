@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 06/11/2018 04:24:54 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.cpyt.entity.EntradaDetalle" table="entrada_detalle" catalog="ferreteria" optimistic-lock="version">
+        <id name="idEntradaDetalle" type="java.lang.Integer">
+            <column name="id_entrada_detalle" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="entrada" class="com.cpyt.entity.Entrada" fetch="select">
+            <column name="id_entrada" not-null="true" />
+        </many-to-one>
+        <many-to-one name="producto" class="com.cpyt.entity.Producto" fetch="select">
+            <column name="id_producto" not-null="true" />
+        </many-to-one>
+        <property name="cantidad" type="int">
+            <column name="cantidad" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
