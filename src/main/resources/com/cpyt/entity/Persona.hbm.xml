@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 06/11/2018 04:24:54 AM by Hibernate Tools 4.3.1 -->
+<!-- Generated 10/11/2018 02:25:13 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.cpyt.entity.Persona" table="persona" catalog="ferreteria" optimistic-lock="version">
         <id name="idPersona" type="java.lang.Integer">
@@ -18,13 +18,13 @@
             <column name="razon_nombres" length="250" not-null="true" />
         </property>
         <property name="direccion" type="string">
-            <column name="direccion" length="250" not-null="true" />
+            <column name="direccion" length="250" />
         </property>
         <property name="celular" type="string">
-            <column name="celular" length="9" not-null="true" />
+            <column name="celular" length="9" />
         </property>
         <property name="fechaNacimiento" type="date">
-            <column name="fecha_nacimiento" length="10" not-null="true" />
+            <column name="fecha_nacimiento" length="10" />
         </property>
         <property name="isDeleted" type="int">
             <column name="is_deleted" not-null="true" />

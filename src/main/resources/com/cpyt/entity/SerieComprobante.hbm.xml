@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 06/11/2018 04:24:54 AM by Hibernate Tools 4.3.1 -->
+<!-- Generated 10/11/2018 02:25:13 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.cpyt.entity.SerieComprobante" table="serie_comprobante" catalog="ferreteria" optimistic-lock="version">
         <id name="idSerieComprobante" type="java.lang.Integer">
@@ -14,8 +14,8 @@
         <property name="serie" type="string">
             <column name="serie" length="10" not-null="true" />
         </property>
-        <property name="iniciarNumeracion" type="int">
-            <column name="iniciar_numeracion" not-null="true" />
+        <property name="iniciarNumeracion" type="java.lang.Integer">
+            <column name="iniciar_numeracion" />
         </property>
         <property name="isDeleted" type="int">
             <column name="is_deleted" not-null="true" />

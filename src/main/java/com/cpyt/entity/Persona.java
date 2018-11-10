@@ -1,5 +1,5 @@
 package com.cpyt.entity;
-// Generated 06/11/2018 04:24:53 AM by Hibernate Tools 4.3.1
+// Generated 10/11/2018 02:25:12 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -28,13 +28,10 @@ public class Persona  implements java.io.Serializable {
     }
 
 	
-    public Persona(TipoPersona tipoPersona, String dniRuc, String razonNombres, String direccion, String celular, Date fechaNacimiento, int isDeleted) {
+    public Persona(TipoPersona tipoPersona, String dniRuc, String razonNombres, int isDeleted) {
         this.tipoPersona = tipoPersona;
         this.dniRuc = dniRuc;
         this.razonNombres = razonNombres;
-        this.direccion = direccion;
-        this.celular = celular;
-        this.fechaNacimiento = fechaNacimiento;
         this.isDeleted = isDeleted;
     }
     public Persona(TipoPersona tipoPersona, String dniRuc, String razonNombres, String direccion, String celular, Date fechaNacimiento, int isDeleted, Set ventasForIdReferencia, Set ventasForIdCliente, Set usuarios) {

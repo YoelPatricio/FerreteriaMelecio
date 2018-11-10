@@ -1,5 +1,5 @@
 package com.cpyt.entity;
-// Generated 06/11/2018 04:24:53 AM by Hibernate Tools 4.3.1
+// Generated 10/11/2018 02:25:12 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -14,7 +14,7 @@ public class Entrada  implements java.io.Serializable {
      private Integer idEntrada;
      private Almacen almacen;
      private Usuario usuario;
-     private int descripcion;
+     private Integer descripcion;
      private int fechaRegistro;
      private int isDeleted;
      private Set entradaDetalles = new HashSet(0);
@@ -23,14 +23,13 @@ public class Entrada  implements java.io.Serializable {
     }
 
 	
-    public Entrada(Almacen almacen, Usuario usuario, int descripcion, int fechaRegistro, int isDeleted) {
+    public Entrada(Almacen almacen, Usuario usuario, int fechaRegistro, int isDeleted) {
         this.almacen = almacen;
         this.usuario = usuario;
-        this.descripcion = descripcion;
         this.fechaRegistro = fechaRegistro;
         this.isDeleted = isDeleted;
     }
-    public Entrada(Almacen almacen, Usuario usuario, int descripcion, int fechaRegistro, int isDeleted, Set entradaDetalles) {
+    public Entrada(Almacen almacen, Usuario usuario, Integer descripcion, int fechaRegistro, int isDeleted, Set entradaDetalles) {
        this.almacen = almacen;
        this.usuario = usuario;
        this.descripcion = descripcion;
@@ -60,11 +59,11 @@ public class Entrada  implements java.io.Serializable {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-    public int getDescripcion() {
+    public Integer getDescripcion() {
         return this.descripcion;
     }
     
-    public void setDescripcion(int descripcion) {
+    public void setDescripcion(Integer descripcion) {
         this.descripcion = descripcion;
     }
     public int getFechaRegistro() {

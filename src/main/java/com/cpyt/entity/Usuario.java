@@ -1,5 +1,5 @@
 package com.cpyt.entity;
-// Generated 06/11/2018 04:24:53 AM by Hibernate Tools 4.3.1
+// Generated 10/11/2018 02:25:12 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -12,6 +12,7 @@ public class Usuario  implements java.io.Serializable {
 
 
      private Integer idUsuario;
+     private Perfil perfil;
      private Persona persona;
      private String usuario;
      private int password;
@@ -25,14 +26,16 @@ public class Usuario  implements java.io.Serializable {
     }
 
 	
-    public Usuario(Persona persona, String usuario, int password, int inSession, int isDeleted) {
+    public Usuario(Perfil perfil, Persona persona, String usuario, int password, int inSession, int isDeleted) {
+        this.perfil = perfil;
         this.persona = persona;
         this.usuario = usuario;
         this.password = password;
         this.inSession = inSession;
         this.isDeleted = isDeleted;
     }
-    public Usuario(Persona persona, String usuario, int password, int inSession, int isDeleted, Set ventas, Set pagos, Set entradas) {
+    public Usuario(Perfil perfil, Persona persona, String usuario, int password, int inSession, int isDeleted, Set ventas, Set pagos, Set entradas) {
+       this.perfil = perfil;
        this.persona = persona;
        this.usuario = usuario;
        this.password = password;
@@ -49,6 +52,13 @@ public class Usuario  implements java.io.Serializable {
     
     public void setIdUsuario(Integer idUsuario) {
         this.idUsuario = idUsuario;
+    }
+    public Perfil getPerfil() {
+        return this.perfil;
+    }
+    
+    public void setPerfil(Perfil perfil) {
+        this.perfil = perfil;
     }
     public Persona getPersona() {
         return this.persona;

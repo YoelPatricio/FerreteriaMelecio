@@ -1,5 +1,5 @@
 package com.cpyt.entity;
-// Generated 06/11/2018 04:24:53 AM by Hibernate Tools 4.3.1
+// Generated 10/11/2018 02:25:12 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -23,6 +23,15 @@ public class Pago  implements java.io.Serializable {
     public Pago() {
     }
 
+	
+    public Pago(TipoPago tipoPago, Usuario usuario, Venta venta, BigDecimal montoPagado, Date fechaPago, int isDeleted) {
+        this.tipoPago = tipoPago;
+        this.usuario = usuario;
+        this.venta = venta;
+        this.montoPagado = montoPagado;
+        this.fechaPago = fechaPago;
+        this.isDeleted = isDeleted;
+    }
     public Pago(TipoPago tipoPago, Usuario usuario, Venta venta, BigDecimal montoPagado, Date fechaPago, String nroBoucherOpera, int isDeleted) {
        this.tipoPago = tipoPago;
        this.usuario = usuario;

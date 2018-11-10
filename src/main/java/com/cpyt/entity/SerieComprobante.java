@@ -1,5 +1,5 @@
 package com.cpyt.entity;
-// Generated 06/11/2018 04:24:53 AM by Hibernate Tools 4.3.1
+// Generated 10/11/2018 02:25:12 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -14,7 +14,7 @@ public class SerieComprobante  implements java.io.Serializable {
      private Integer idSerieComprobante;
      private TipoComprobante tipoComprobante;
      private String serie;
-     private int iniciarNumeracion;
+     private Integer iniciarNumeracion;
      private int isDeleted;
      private Set ventas = new HashSet(0);
 
@@ -22,13 +22,12 @@ public class SerieComprobante  implements java.io.Serializable {
     }
 
 	
-    public SerieComprobante(TipoComprobante tipoComprobante, String serie, int iniciarNumeracion, int isDeleted) {
+    public SerieComprobante(TipoComprobante tipoComprobante, String serie, int isDeleted) {
         this.tipoComprobante = tipoComprobante;
         this.serie = serie;
-        this.iniciarNumeracion = iniciarNumeracion;
         this.isDeleted = isDeleted;
     }
-    public SerieComprobante(TipoComprobante tipoComprobante, String serie, int iniciarNumeracion, int isDeleted, Set ventas) {
+    public SerieComprobante(TipoComprobante tipoComprobante, String serie, Integer iniciarNumeracion, int isDeleted, Set ventas) {
        this.tipoComprobante = tipoComprobante;
        this.serie = serie;
        this.iniciarNumeracion = iniciarNumeracion;
@@ -57,11 +56,11 @@ public class SerieComprobante  implements java.io.Serializable {
     public void setSerie(String serie) {
         this.serie = serie;
     }
-    public int getIniciarNumeracion() {
+    public Integer getIniciarNumeracion() {
         return this.iniciarNumeracion;
     }
     
-    public void setIniciarNumeracion(int iniciarNumeracion) {
+    public void setIniciarNumeracion(Integer iniciarNumeracion) {
         this.iniciarNumeracion = iniciarNumeracion;
     }
     public int getIsDeleted() {

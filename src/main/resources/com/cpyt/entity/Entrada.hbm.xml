@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 06/11/2018 04:24:54 AM by Hibernate Tools 4.3.1 -->
+<!-- Generated 10/11/2018 02:25:13 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
     <class name="com.cpyt.entity.Entrada" table="entrada" catalog="ferreteria" optimistic-lock="version">
         <id name="idEntrada" type="java.lang.Integer">
@@ -14,8 +14,8 @@
         <many-to-one name="usuario" class="com.cpyt.entity.Usuario" fetch="select">
             <column name="id_usuario" not-null="true" />
         </many-to-one>
-        <property name="descripcion" type="int">
-            <column name="descripcion" not-null="true" />
+        <property name="descripcion" type="java.lang.Integer">
+            <column name="descripcion" />
         </property>
         <property name="fechaRegistro" type="int">
             <column name="fecha_registro" not-null="true" />

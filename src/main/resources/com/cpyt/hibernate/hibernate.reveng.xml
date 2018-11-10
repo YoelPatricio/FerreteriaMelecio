@@ -3,19 +3,20 @@
 
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="ferreteria"/>
-  <table-filter match-name="venta_detalle"/>
-  <table-filter match-name="inventario"/>
+  <table-filter match-name="venta"/>
+  <table-filter match-name="producto"/>
+  <table-filter match-name="pago"/>
   <table-filter match-name="unidad_medida"/>
   <table-filter match-name="serie_comprobante"/>
-  <table-filter match-name="entrada_detalle"/>
+  <table-filter match-name="perfil"/>
   <table-filter match-name="persona"/>
-  <table-filter match-name="tipo_persona"/>
-  <table-filter match-name="usuario"/>
-  <table-filter match-name="almacen"/>
-  <table-filter match-name="pago"/>
-  <table-filter match-name="tipo_pago"/>
   <table-filter match-name="entrada"/>
-  <table-filter match-name="venta"/>
+  <table-filter match-name="venta_detalle"/>
+  <table-filter match-name="usuario"/>
   <table-filter match-name="tipo_comprobante"/>
-  <table-filter match-name="producto"/>
+  <table-filter match-name="entrada_detalle"/>
+  <table-filter match-name="tipo_pago"/>
+  <table-filter match-name="almacen"/>
+  <table-filter match-name="inventario"/>
+  <table-filter match-name="tipo_persona"/>
 </hibernate-reverse-engineering>

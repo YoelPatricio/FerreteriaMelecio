@@ -1,5 +1,5 @@
 package com.cpyt.entity;
-// Generated 06/11/2018 04:24:53 AM by Hibernate Tools 4.3.1
+// Generated 10/11/2018 02:25:12 AM by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -28,11 +28,9 @@ public class Producto  implements java.io.Serializable {
     }
 
 	
-    public Producto(UnidadMedida unidadMedida, String nombre, String descripcion, String color, BigDecimal precioMaestro, BigDecimal precioPublico, int isDeleted) {
+    public Producto(UnidadMedida unidadMedida, String nombre, BigDecimal precioMaestro, BigDecimal precioPublico, int isDeleted) {
         this.unidadMedida = unidadMedida;
         this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.color = color;
         this.precioMaestro = precioMaestro;
         this.precioPublico = precioPublico;
         this.isDeleted = isDeleted;

@@ -1,5 +1,5 @@
 package com.cpyt.entity;
-// Generated 06/11/2018 04:24:53 AM by Hibernate Tools 4.3.1
+// Generated 10/11/2018 02:25:12 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -21,9 +21,8 @@ public class Almacen  implements java.io.Serializable {
     }
 
 	
-    public Almacen(String nombre, String descripcion) {
+    public Almacen(String nombre) {
         this.nombre = nombre;
-        this.descripcion = descripcion;
     }
     public Almacen(String nombre, String descripcion, Set inventarios, Set entradas) {
        this.nombre = nombre;

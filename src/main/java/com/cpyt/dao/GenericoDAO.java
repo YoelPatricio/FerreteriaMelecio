@@ -2,11 +2,13 @@
 package com.cpyt.dao;
 
 import java.util.List;
+import java.util.Map;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.transform.ResultTransformer;
 
 public class GenericoDAO {
     //si va con hibernateutil++++++++++++++++
@@ -66,10 +68,10 @@ public class GenericoDAO {
         return ultimoID;
     }
     
-    public List<Object> list(String entidad) {
+    public List<Map<String,Object>> list(String entidad) {
 
         Session session = sessionFactory.openSession();
-        Query query = session.createQuery("from "+entidad+" where isDeleted=?");
+        Query query = session.createQuery("from "+entidad+" where is_deleted=?");
         query.setParameter(0, 0);
         List results = query.list();
         return results;
@@ -303,7 +305,7 @@ public class GenericoDAO {
         g.insert(ope);
         */
         
-        
+        /*
         List<Object> sad = g.getComboList("delito", "id_deli", "nombre", "");
         Object[] s = new Object[]{};
         for (int i = 0;i<sad.size();i++) {
@@ -311,5 +313,8 @@ public class GenericoDAO {
             System.out.println("Id = "+s[0]);
             System.out.println("Nombre = "+s[1]);
         }
+        */
+        
+        List<Map<String,Object>> map = g.list("Persona");
     }
 }

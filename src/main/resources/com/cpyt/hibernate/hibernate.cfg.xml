@@ -9,6 +9,7 @@
     <mapping resource="com/cpyt/entity/VentaDetalle.hbm.xml"/>
     <mapping resource="com/cpyt/entity/Usuario.hbm.xml"/>
     <mapping resource="com/cpyt/entity/Persona.hbm.xml"/>
+    <mapping resource="com/cpyt/entity/Perfil.hbm.xml"/>
     <mapping resource="com/cpyt/entity/Entrada.hbm.xml"/>
     <mapping resource="com/cpyt/entity/TipoPago.hbm.xml"/>
     <mapping resource="com/cpyt/entity/Almacen.hbm.xml"/>
