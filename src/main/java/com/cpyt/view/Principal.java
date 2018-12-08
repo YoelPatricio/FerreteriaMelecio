@@ -27,17 +27,71 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jMenuBar1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+
+        jMenu1.setText("Personas");
+        jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jMenuItem2.setText("Gestionar Personas");
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu4.setText("Productos");
+        jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jMenuItem6.setText("Gestionar Productos");
+        jMenu4.add(jMenuItem6);
+
+        jMenuItem4.setText("Regitrar Entrada");
+        jMenu4.add(jMenuItem4);
+
+        jMenuBar1.add(jMenu4);
+
+        jMenu2.setText("Venta");
+        jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jMenuItem3.setText("Realizar Venta");
+        jMenu2.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Reporte");
+        jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+
+        jMenuItem1.setText("Ventas");
+        jMenu3.add(jMenuItem1);
+
+        jMenuItem5.setText("Ventas Maestros Referenciados");
+        jMenu3.add(jMenuItem5);
+
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 801, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 427, Short.MAX_VALUE)
         );
 
         pack();
@@ -79,5 +133,16 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     // End of variables declaration//GEN-END:variables
 }
