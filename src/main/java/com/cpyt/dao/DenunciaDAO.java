@@ -62,7 +62,7 @@ public class DenunciaDAO {
         return results;
     }
     
-    public List<Denuncia> getDenunciasList_(String cadena) {
+    public List<Object> getDenunciasList_(String cadena) {//la Denuncia se reemplazo por Object
 
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("from Denuncia where cast(idDenun as string) like ?"
@@ -106,16 +106,16 @@ public class DenunciaDAO {
     
     
     
-    public Denuncia getDenunciaPorId(Integer id) {
+    public Object getDenunciaPorId(Integer id) {//la Denuncia se reemplazo por Object
 
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("from Denuncia where idDenun = ?");
         query.setParameter(0, id);
         List results = query.list();
         
-        Denuncia denun = new Denuncia();
+        //Denuncia denun = new Denuncia();
         if(results.size()>0){
-         return denun = (Denuncia) results.get(0);
+         //return denun = (Denuncia) results.get(0);
         }
         return null;
     }
@@ -225,8 +225,8 @@ public class DenunciaDAO {
         
         try {
            List<Object> den = d.getDenunciasList("Deli"); 
-            Denuncia de = (Denuncia)den.get(0);
-            String namedelito=de.getDelito().getNombre();
+            //Denuncia de = (Denuncia)den.get(0);
+            //String namedelito=de.getDelito().getNombre();
            int a = 0;
            
         } catch (Exception e) {
